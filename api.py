@@ -59,7 +59,8 @@ class Items(APIView):
                 one_subcategory = {'items' : items}
 
                 subcategories.append(one_subcategory)
-
+                           
+            one_category['subcategories'] = subcategories
             categories.append(one_category)
 
         return Response(categories)
